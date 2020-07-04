@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A Demo Guide to Flexbox</title>
+    <meta charset="UTF-8">
+    <title>A Demo Guide to Flexbox</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<header>
+    <ul class="navigation">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</header>
+<div class="container-fluid">
+    <h1>A Demo Guide to Flexbox</h1>
+    <div class="row">
+        <div class="col-sm demo-flex-container">
+            <h2>Properties for the Parent<br>
+                (flex container)</h2>
+            <!--For display flex vs inline-flex -->
+            <div class="flex-demo container-demo">
+                <h3 class="mb-3">Display</h3>
+                <h4>flex</h4>
+                <div class="flex p-3 mb-5 text-white bg-black">
+                    <div class="p-2 item bg-warning">1</div>
+                    <div class="p-2 item bg-danger">2</div>
+                    <div class="p-2 item bg-info">3</div>
+                    <div class="p-2 item bg-success">4</div>
+                    <div class="p-2 item bg-secondary">5</div>
+                    <div class="p-2 item bg-primary">6</div>
+                </div>
+                    <h4>inline-flex</h4>
+                <div class="inline-flex p-3 text-white bg-black">
+                    <div class="p-2 item bg-warning">1</div>
+                    <div class="p-2 item bg-danger">2</div>
+                    <div class="p-2 item bg-info">3</div>
+                    <div class="p-2 item bg-success">4</div>
+                    <div class="p-2 item bg-secondary">5</div>
+                    <div class="p-2 item bg-primary">6</div>
+                </div>
+            </div>
+            <!--End For display flex vs inline-flex -->
+
+            <!--For flex-direction -->
+            <div class="flex-direction-demo container-demo">
+                <h3 class="mb-3">Flex-direction</h3>
+                <!-- Row -->
+                <h4>row(default)</h4>
+                <div class="flex flex-direction-row p-3 mb-5 text-white bg-black">
+                    <div class="p-2 item bg-warning">1</div>
+                    <div class="p-2 item bg-danger">2</div>
+                    <div class="p-2 item bg-info">3</div>
+                    <div class="p-2 item bg-success">4</div>
+                    <div class="p-2 item bg-secondary">5</div>
+                    <div class="p-2 item bg-primary">6</div>
+                </div>
+
+                <!-- Row-reverse -->
+                <h4>row-reverse</h4>
+                <div class="flex flex-direction-row-reverse p-3 mb-5 text-white bg-black">
+                    <div class="p-2 item bg-warning">1</div>
+                    <div class="p-2 item bg-danger">2</div>
+                    <div class="p-2 item bg-info">3</div>
+                    <div class="p-2 item bg-success">4</div>
+                    <div class="p-2 item bg-secondary">5</div>
+                    <div class="p-2 item bg-primary">6</div>
+                </div>
+
+                <!-- column and column reverse -->
+                <div class="row">
+                    <div class="col-sm text-center">
+                        <h4>column</h4>
+                        <div class="flex flex-direction-column p-3 text-white bg-black">
+                            <div class="p-2 item bg-warning">1</div>
+                            <div class="p-2 item bg-danger">2</div>
+                            <div class="p-2 item bg-info">3</div>
+                            <div class="p-2 item bg-success">4</div>
+                            <div class="p-2 item bg-secondary">5</div>
+                            <div class="p-2 item bg-primary">6</div>
+                        </div>
+                    </div>
+                    <div class="col-sm text-center">
+                        <h4>column-reverse</h4>
+                        <div class="flex flex-direction-column-reverse p-3 text-white bg-black">
+                            <div class="p-2 item bg-warning">1</div>
+                            <div class="p-2 item bg-danger">2</div>
+                            <div class="p-2 item bg-info">3</div>
+                            <div class="p-2 item bg-success">4</div>
+                            <div class="p-2 item bg-secondary">5</div>
+                            <div class="p-2 item bg-primary">6</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End For flex-direction -->
+
+            <!--For flex-wrap -->
+            <div class="flex-wrap-demo container-demo">
+                <h3 class="mb-3">Flex-wrap</h3>
+                <!-- nowrap -->
+                <h4>nowrap(default)</h4>
+                <div class="flex flex-wrap-nowrap p-3 mb-5 text-white bg-black">
+                    <div class="p-2 item bg-warning">1</div>
+                    <div class="p-2 item bg-danger">2</div>
+                    <div class="p-2 item bg-info">3</div>
+                    <div class="p-2 item bg-success">4</div>
+                    <div class="p-2 item bg-secondary">5</div>
+                    <div class="p-2 item bg-primary">6</div>
+                    <div class="p-2 item bg-warning">7</div>
+                    <div class="p-2 item bg-danger">8</div>
+                    <div class="p-2 item bg-info">9</div>
+                    <div class="p-2 item bg-success">10</div>
+                </div>
+
+                <!-- wrap -->
+                <h4>wrap</h4>
+                <div class="flex flex-wrap-wrap p-3 mb-5 text-white bg-black">
+                    <div class="p-2 item bg-warning">1</div>
+                    <div class="p-2 item bg-danger">2</div>
+                    <div class="p-2 item bg-info">3</div>
+                    <div class="p-2 item bg-success">4</div>
+                    <div class="p-2 item bg-secondary">5</div>
+                    <div class="p-2 item bg-primary">6</div>
+                    <div class="p-2 item bg-warning">7</div>
+                    <div class="p-2 item bg-danger">8</div>
+                    <div class="p-2 item bg-info">9</div>
+                    <div class="p-2 item bg-success">10</div>
+                </div>
+
+                <!-- wrap-reverse -->
+                <h4>wrap-reverse</h4>
+                <div class="flex flex-wrap-reverse p-3 text-white bg-black">
+                    <div class="p-2 item bg-warning">1</div>
+                    <div class="p-2 item bg-danger">2</div>
+                    <div class="p-2 item bg-info">3</div>
+                    <div class="p-2 item bg-success">4</div>
+                    <div class="p-2 item bg-secondary">5</div>
+                    <div class="p-2 item bg-primary">6</div>
+                </div>
+            </div>
+            <!--End For flex-wrap -->
+
+            <!--For flex-flow -->
+            <div class="flex-flow-demo container-demo">
+                <h3 class="mb-3">Flex-flow</h3>
+                <!-- nowrap -->
+                <h4>column-wrap</h4>
+                <div class="flex flex-flow p-3 text-white bg-black">
+                    <div class="p-2 item bg-warning">1</div>
+                    <div class="p-2 item bg-danger">2</div>
+                    <div class="p-2 item bg-info">3</div>
+                    <div class="p-2 item bg-success">4</div>
+                    <div class="p-2 item bg-secondary">5</div>
+                </div>
+            </div>
+            <!--End For flex-flow -->
+
+            <!--For justify-content -->
+            <div class="justify-content-demo container-demo">
+                <h3 class="mb-3">Justify-content</h3>
+                <!-- flex-start -->
+                <h4>flex-start(default)</h4>
+                <div class="flex jc-flex-start p-3 mb-5 text-white bg-black">
+                    <div class="p-2 item bg-warning">1</div>
+                    <div class="p-2 item bg-danger">2</div>
+                    <div class="p-2 item bg-info">3</div>
+                    <div class="p-2 item bg-success">4</div>
+                    <div class="p-2 item bg-secondary">5</div>
+                    <div class="p-2 item bg-primary">6</div>
+                </div>
+
+                <!-- flex-end -->
+                <h4>flex-end</h4>
+                <div class="flex jc-flex-end p-3 mb-5 text-white bg-black">
+                    <div class="p-2 item bg-warning">1</div>
+                    <div class="p-2 item bg-danger">2</div>
+                    <div class="p-2 item bg-info">3</div>
+                    <div class="p-2 item bg-success">4</div>
+                    <div class="p-2 item bg-secondary">5</div>
+                    <div class="p-2 item bg-primary">6</div>
+                </div>
+
+                <!-- center -->
+                <h4>center</h4>
+                <div class="flex jc-center p-3 mb-5 text-white bg-black">
+                    <div class="p-2 item bg-warning">1</div>
+                    <div class="p-2 item bg-danger">2</div>
+                    <div class="p-2 item bg-info">3</div>
+                    <div class="p-2 item bg-success">4</div>
+                    <div class="p-2 item bg-secondary">5</div>
+                    <div class="p-2 item bg-primary">6</div>
+                </div>
+
+                <!-- space-between -->
+                <h4>space-between</h4>
+                <div class="flex jc-space-between p-3 mb-5 text-white bg-black">
+                    <div class="p-2 item bg-warning">1</div>
+                    <div class="p-2 item bg-danger">2</div>
+                    <div class="p-2 item bg-info">3</div>
+                    <div class="p-2 item bg-success">4</div>
+                    <div class="p-2 item bg-secondary">5</div>
+                </div>
+
+                <!-- space-around -->
+                <h4>space-around</h4>
+                <div class="flex jc-space-around p-3 mb-5 text-white bg-black">
+                    <div class="p-2 item bg-warning">1</div>
+                    <div class="p-2 item bg-danger">2</div>
+                    <div class="p-2 item bg-info">3</div>
+                    <div class="p-2 item bg-success">4</div>
+                    <div class="p-2 item bg-secondary">5</div>
+                </div>
+
+                <!-- space-evenly -->
+                <h4>space-evenly</h4>
+                <div class="flex jc-space-evenly p-3 text-white bg-black">
+                    <div class="p-2 item bg-warning">1</div>
+                    <div class="p-2 item bg-danger">2</div>
+                    <div class="p-2 item bg-info">3</div>
+                    <div class="p-2 item bg-success">4</div>
+                    <div class="p-2 item bg-secondary">5</div>
+                </div>
+            </div>
+            <!--End For justify-content -->
+
+            <!--For align-items -->
+            <div class="align-items-demo container-demo">
+                <h3 class="mb-3">align-items</h3>
+                <!-- stretch -->
+                <h4>stretch(default)</h4>
+                <div class="flex ai-stretch p-3 mb-5 text-white bg-black">
+                    <div class="p-2 item bg-warning">1</div>
+                    <div class="p-2 font45 item bg-danger">2</div>
+                    <div class="p-2 item bg-info">3</div>
+                    <div class="p-2 font45 item bg-success">4</div>
+                    <div class="p-2 item bg-secondary">5</div>
+                    <div class="p-2 font45 item bg-primary">6</div>
+                </div>
+
+                <!-- flex-start -->
+                <h4>flex-start</h4>
+                <div class="flex ai-flex-start p-3 mb-5 text-white bg-black">
+                    <div class="p-2 item bg-warning">1</div>
+                    <div class="p-2 font45 item bg-danger">2</div>
+                    <div class="p-2 item bg-info">3</div>
+                    <div class="p-2 font45 item bg-success">4</div>
+                    <div class="p-2 item bg-secondary">5</div>
+                    <div class="p-2 font45 item bg-primary">6</div>
+                </div>
+
+                <!-- flex-end -->
+                <h4>flex-end</h4>
+                <div class="flex ai-flex-end p-3 mb-5 text-white bg-black">
+                    <div class="p-2 item bg-warning">1</div>
+                    <div class="p-2 font45 item bg-danger">2</div>
+                    <div class="p-2 item bg-info">3</div>
+                    <div class="p-2 font45 item bg-success">4</div>
+                    <div class="p-2 item bg-secondary">5</div>
+                    <div class="p-2 font45 item bg-primary">6</div>
+                </div>
+
+                <!-- center -->
+                <h4>center</h4>
+                <div class="flex ai-center p-3 mb-5 text-white bg-black">
+                    <div class="p-2 item bg-warning">1</div>
+                    <div class="p-2 font45 item bg-danger">2</div>
+                    <div class="p-2 item bg-info">3</div>
+                    <div class="p-2 font45 item bg-success">4</div>
+                    <div class="p-2 item bg-secondary">5</div>
+                    <div class="p-2 font45 item bg-primary">6</div>
+                </div>
+
+                <!-- baseline -->
+                <h4>baseline</h4>
+                <div class="flex ai-baseline p-3 text-white bg-black">
+                    <div class="p-2 item bg-warning">1</div>
+                    <div class="p-2 font45 item bg-danger">2</div>
+                    <div class="p-2 item bg-info">3</div>
+                    <div class="p-2 font45 item bg-success">4</div>
+                    <div class="p-2 item bg-secondary">5</div>
+                    <div class="p-2 font45 item bg-primary">6</div>
+                </div>
+
+            </div>
+            <!--End For align-items -->
+
+            <!--For align-content -->
+            <div class="align-content-demo container-demo">
+                <h3 class="mb-3">align-content</h3>
+                <div class="flex jc-space-between">
+                    <div class="content-1">
+                        <!-- stretch -->
+                        <h4>stretch(default)</h4>
+                        <div class="flex align-content ac-stretch p-3 mb-5 text-white bg-black">
+                            <div class="p-2 item bg-warning">1</div>
+                            <div class="p-2 item bg-danger">2</div>
+                            <div class="p-2 item bg-info">3</div>
+                            <div class="p-2 item bg-success">4</div>
+                            <div class="p-2 item bg-secondary">5</div>
+                            <div class="p-2 item bg-primary">6</div>
+                        </div>
+
+                        <!-- flex-start -->
+                        <h4>flex-start</h4>
+                        <div class="flex align-content ac-flex-start p-3 mb-5 text-white bg-black">
+                            <div class="p-2 item bg-warning">1</div>
+                            <div class="p-2 item bg-danger">2</div>
+                            <div class="p-2 item bg-info">3</div>
+                            <div class="p-2 item bg-success">4</div>
+                            <div class="p-2 item bg-secondary">5</div>
+                            <div class="p-2 item bg-primary">6</div>
+                        </div>
+
+                        <!-- flex-end -->
+                        <h4>flex-end</h4>
+                        <div class="flex align-content ac-flex-end p-3 mb-5 text-white bg-black">
+                            <div class="p-2 item bg-warning">1</div>
+                            <div class="p-2 item bg-danger">2</div>
+                            <div class="p-2 item bg-info">3</div>
+                            <div class="p-2 item bg-success">4</div>
+                            <div class="p-2 item bg-secondary">5</div>
+                            <div class="p-2 item bg-primary">6</div>
+                        </div>
+                    </div>
+
+                    <div class="content-2">
+                        <!-- center -->
+                        <h4>center</h4>
+                        <div class="flex align-content ac-center p-3 mb-5 text-white bg-black">
+                            <div class="p-2 item bg-warning">1</div>
+                            <div class="p-2 item bg-danger">2</div>
+                            <div class="p-2 item bg-info">3</div>
+                            <div class="p-2 item bg-success">4</div>
+                            <div class="p-2 item bg-secondary">5</div>
+                            <div class="p-2 item bg-primary">6</div>
+                        </div>
+
+                        <!-- space-between -->
+                        <h4>space-between</h4>
+                        <div class="flex align-content ac-space-between p-3 mb-5 text-white bg-black">
+                            <div class="p-2 item bg-warning">1</div>
+                            <div class="p-2 item bg-danger">2</div>
+                            <div class="p-2 item bg-info">3</div>
+                            <div class="p-2 item bg-success">4</div>
+                            <div class="p-2 item bg-secondary">5</div>
+                            <div class="p-2 item bg-primary">6</div>
+                        </div>
+
+                        <!-- space-around -->
+                        <h4>space-around</h4>
+                        <div class="flex align-content ac-space-around p-3 mb-5 text-white bg-black">
+                            <div class="p-2 item bg-warning">1</div>
+                            <div class="p-2 item bg-danger">2</div>
+                            <div class="p-2 item bg-info">3</div>
+                            <div class="p-2 item bg-success">4</div>
+                            <div class="p-2 item bg-secondary">5</div>
+                            <div class="p-2 item bg-primary">6</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--End For align-items -->
+
+        </div>
+        <div class="col-sm demo-flex-item">
+            <h2>Properties for the Children<br>
+                (flex items)</h2>
+            <!--For order item -->
+            <div class="flex-order-item-demo container-demo">
+                <h3 class="mb-3">Order</h3>
+                <h4>Default</h4>
+                <div class="flex p-3 mb-5 text-white bg-black">
+                    <div class="p-2 item bg-warning">1</div>
+                    <div class="p-2 item bg-danger">2</div>
+                    <div class="p-2 item bg-info">3</div>
+                    <div class="p-2 item bg-success">4</div>
+                    <div class="p-2 item bg-secondary">5</div>
+                    <div class="p-2 item bg-primary">6</div>
+                </div>
+
+                <h4>Set the value Order to the 1st item is 5(row)</h4>
+                <div class="flex p-3 order text-white mb-5 bg-black">
+                    <div class="p-2 item bg-warning">1 (order 5)</div>
+                    <div class="p-2 item bg-danger">2</div>
+                    <div class="p-2 item bg-info">3</div>
+                    <div class="p-2 item bg-success">4</div>
+                    <div class="p-2 item bg-secondary">5</div>
+                    <div class="p-2 item bg-primary">6</div>
+                </div>
+
+                <h4>Set the value Order to the 1st item is 5(column)</h4>
+                <div class="flex flex-direction-column order p-3 text-white bg-black">
+                    <div class="p-2 item bg-warning">1 (order 5)</div>
+                    <div class="p-2 item bg-danger">2</div>
+                    <div class="p-2 item bg-info">3</div>
+                    <div class="p-2 item bg-success">4</div>
+                    <div class="p-2 item bg-secondary">5</div>
+                    <div class="p-2 item bg-primary">6</div>
+                </div>
+            </div>
+            <!--End For For order item -->
+
+            <!--For flex-grow item -->
+            <div class="flex-flex-grow-demo container-demo">
+                <h3 class="mb-3">flex-grow</h3>
+                <h4>Default</h4>
+                <div class="flex p-3 case-1 mb-5 text-white bg-black">
+                    <div class="p-2 item bg-warning">1</div>
+                    <div class="p-2 item bg-danger">2</div>
+                    <div class="p-2 item bg-info">3</div>
+                    <div class="p-2 item bg-success">4</div>
+                    <div class="p-2 item bg-secondary">5</div>
+                </div>
+
+                <h4>An item has flex-grow value that is different from other items.</h4>
+                <div class="flex p-3 case-2 mb-5 text-white bg-black">
+                    <div class="p-2 item bg-warning">1</div>
+                    <div class="p-2 item bg-danger">2 (value: 3)</div>
+                    <div class="p-2 item bg-info">3</div>
+                    <div class="p-2 item bg-success">4</div>
+                    <div class="p-2 item bg-secondary">5</div>
+                </div>
+
+                <h4>The two items have flex-grow growth values ​​than the other items.</h4>
+                <div class="flex p-3 case-3 text-white bg-black">
+                    <div class="p-2 item bg-warning">1</div>
+                    <div class="p-2 item bg-danger">2 (value: 3)</div>
+                    <div class="p-2 item bg-info">3</div>
+                    <div class="p-2 item bg-success">4 (value: 2)</div>
+                    <div class="p-2 item bg-secondary">5</div>
+                </div>
+            </div>
+            <!--End For flex-grow item -->
+
+            <!--For flex-shrink item -->
+            <div class="flex-flex-shrink-demo container-demo">
+                <h3 class="mb-3">flex-shrink</h3>
+
+                <h4>An item has flex-shrink value that is different from other items.</h4>
+                <div class="flex p-3 case-1 text-white bg-black">
+                    <div class="p-2 item bg-warning">1</div>
+                    <div class="p-2 item bg-danger">2</div>
+                    <div class="p-2 item bg-info">3</div>
+                    <div class="p-2 item bg-success">4</div>
+                    <div class="p-2 item bg-secondary">5</div>
+                </div>
+            </div>
+            <!--End For flex-shrink item -->
+
+            <!--For flex-basis item -->
+            <div class="flex-flex-basis-demo container-demo">
+                <h3 class="mb-3">flex-basis</h3>
+
+                <div class="flex p-3 text-white bg-black">
+                    <div class="p-2 item bg-warning">50px</div>
+                    <div class="p-2 item bg-danger">100px</div>
+                    <div class="p-2 item bg-info">50px</div>
+                    <div class="p-2 item bg-success">100px</div>
+                    <div class="p-2 item bg-secondary">50px</div>
+                </div>
+            </div>
+            <!--End For flex-basis item -->
+
+            <!--For flex item -->
+            <div class="flex-flex-demo container-demo">
+                <h3 class="mb-3">flex</h3>
+
+                <div class="flex p-3 text-white bg-black">
+                    <div class="p-2 item bg-warning">50px</div>
+                    <div class="p-2 item bg-danger">100px</div>
+                    <div class="p-2 item bg-info">50px</div>
+                    <div class="p-2 item bg-success">100px</div>
+                    <div class="p-2 item bg-secondary">50px</div>
+                </div>
+            </div>
+            <!--End For flex-basis order item -->
+
+            <!--For align-self item -->
+            <div class="flex-align-self-demo container-demo">
+                <h3 class="mb-3">align-self</h3>
+
+                <div class="flex p-3 text-white bg-black">
+                    <div class="p-2 item bg-warning">stretch</div>
+                    <div class="p-2 item bg-danger">flex-start</div>
+                    <div class="p-2 item bg-info">flex-end</div>
+                    <div class="p-2 item bg-success">center</div>
+                    <div class="p-2 item bg-secondary">baseline</div>
+                </div>
+            </div>
+            <!--End For flex-basis order item -->
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
